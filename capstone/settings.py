@@ -139,6 +139,6 @@ EMAIL_USE_TLS = True
 ALLOWED_HOSTS = [
     '*',
     '0.0.0.0',
-    'allops.herokuapp.com/',
+    'allops.herokuapp.com',
     '127.0.0.1'
 ]
