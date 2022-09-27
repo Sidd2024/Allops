@@ -1,0 +1,64 @@
+{% extends 'Allops/layout.html' %}
+{% block body %}
+<style>
+    body {
+        background-image: url('https://uploads-ssl.webflow.com/5f00ac7516929863f832df2c/5f024185bd3802617c637c5c_18.%20Buttercup.jpg');
+    }
+</style>
+{% if msg %}
+<div><h3>{{ msg }}</h3></div>
+{% endif %}
+<div class="hr"></div>
+<br>
+<center>
+<span style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 30px;">SAV</span><span style="font-family: 'Zangezi07';font-size:30px;">ED</span>
+</center>
+<br>
+<!--Saved Opportunities-->
+{% for save in saves %}
+<div class="item-div">
+    <a href="{% url 'activity' save.activity.id %}">
+        <div class="item-content">
+            <!--Opportunity front view-->
+            {% if save.activity.featured == True %}
+            <div class="item-front" style="background-image: url('/static/Allops/images/featured-card.jpg');background-size: cover;">
+            {% else %}
+            <div class="item-front">
+            {% endif %}
+                <img src="{{ save.activity.image }}" alt="" class="item-image">
+                {% if save.activity.featured == True %}
+                <img src="/static/Allops/images/bookmark.png" alt="" style="height: 50px;width:40px;position: absolute;margin-left: -50px;transform: translateZ(35px);">
+                {% endif %}
+                <br><br>
+                <h5 class="item-head">
+                    {{ save.activity.head }}
+                </h5>
+                <br>
+                <h6 class="item-dates"> <i class='far fa-calendar-alt'></i> {{ save.activity.start }}</h6>
+                <br>
+                <p class="item-tag">{{ save.activity.interest }}</p>
+            </div>
+            <!--Opportunity back view-->
+            <div class="item-back">
+                <p class="item-desc">"{{ save.activity.desc }}"</p>
+                <!--Save and Share buttons-->
+                <span class="item-share">
+                    <div class="fa fa-share-alt" data-id="{{ item.id }}"></div><br>
+                </span>
+                {% if save.activity.id %}
+                    <span class="item-save">
+                        <div class="fas fa-bookmark" data-id="{{ save.activity.id }}"></div>
+                    </span>
+                    {% else %}
+                    <span class="item-save">
+                        <div class="far fa-bookmark fa-inverse" data-id="{{ item.id }}"></div>
+                    </span>
+                {% endif %}
+            </div>
+        </div>
+    </a>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'Allops/layout.html' %}
+
+{% block body %}
+<div class="hr"></div>
+<style>
+    body {
+        background-image: url("/static/Allops/images/opportunity.jpg");
+    }
+</style>
+<br><br>
+
+<Center><h1>{{ item.head }}</h1></Center>
+<!--Save button-->
+{% if request.user.is_authenticated %}
+{% if saved %}
+<div class="fas fa-bookmark" data-id="{{ item.id }}" style="font-size: 30px;color: #000;position: absolute;margin-left: 20px;margin-top: -40px;cursor: pointer;" id="btn-save"></div>
+{% else %}
+<div class="far fa-bookmark" data-id="{{ item.id }}" style="font-size: 30px;color: #000;position: absolute;margin-left: 20px;margin-top: -40px;cursor: pointer;" id="btn-save"></div>
+{% endif %}
+{% endif %}
+
+<br><br>
+<img src="{{ item.image }}" alt="" id="image-div">
+<br><br>
+<!--Opportunity info-->
+<div id="option-block">
+    <div id="dates-div">
+        <h4>DATES</h4>
+        Starts: {{ item.start}}<br>
+        Ends: {{ item.end }}
+    </div>
+    <div id="location-div">
+        <h4>LOCATION</h4>
+        {{ item.location }}
+    </div>
+    <div id="tag-div">
+        <h4>TAGS</h4>
+        {{ item.interest }}
+    </div>
+    <div id="link-div">
+        <a href="{{ item.link }}" target="_blank"class="btn">Official Site-></a>
+    </div>
+</div>
+<!--Overview and More Details-->
+<br><br>
+<div id="desc-div">
+    <Center><h3>OVERVIEW</h3></Center><br>
+    {{ item.desc }}
+</div>
+<br>
+<div id="details-div">
+    <Center><h3>More Details</h3></Center><br>
+    {{ item.details | safe | linebreaks }}
+</div>
+
+{% endblock %}

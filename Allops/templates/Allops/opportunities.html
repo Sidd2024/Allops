@@ -1,0 +1,180 @@
+{% extends "Allops/layout.html" %}
+
+{% block body %}
+<div class="hr"></div>
+<!--Set background and banner according to the type-->
+<br>
+{% if type == 'Competitive' %}
+<style>
+    body {
+        background: -webkit-linear-gradient(to right, #89fffd, #ef32d9) auto 100%;
+        background: linear-gradient(to right, #89fffd, #ef32d9);
+        backgroun-repeat: no-repeat;    
+    }
+</style>
+<div class="banner">
+    <img src="/static/Allops/images/compete.jpg" alt="" class="banner-image">
+    <table class="banner-table">
+        <td>
+            <img src="/static/Allops/images/hackathon.png" alt="" class="banner-icon">
+        </td>
+        <td>
+            <h3><i class="fa fa-quote-left"></i> Get ready with yout tech stack to compete with others while
+                you develop your skills and win prizes. <i class="fa fa-quote-right"></i></h3>
+        </td>
+    </table>
+</div>
+{% elif type == 'Event' %}
+<style>
+    body {
+        background-color: #FA8BFF;
+        background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    }
+</style>
+<div class="banner">
+    <img src="https://weshape.tech/wp-content/uploads/Learn-to-Code-2017-1024x682.jpg" alt="" class="banner-image">
+    <table class="banner-table">
+        <tr>
+        <td>
+            <img src="/static/Allops/images/event.png" alt="" class="banner-icon">
+        </td>
+        <td>
+            <h3><i class="fa fa-quote-left"></i> Meet other fellow developers from around the world and localy. Learn and implement together, collaborate, showcase talent and work in team. <i class="fa fa-quote-right"></i></h3>
+        </td>
+    </tr>
+    </table>
+</div>
+{% elif type == 'Program' %}
+<style>
+    body {
+        background-image: url("/static/Allops/images/program.jpg");
+    }
+</style>
+<div class="banner">
+    <img src="https://cdn-media-1.freecodecamp.org/images/1*sXDzhjLdiAQgb8yu9JFiQA.png" alt="" class="banner-image">
+    <table class="banner-table">
+        <td>
+            <img src="/static/Allops/images/program.png" alt="" class="banner-icon">
+        </td>
+        <td>
+            <h3><i class="fa fa-quote-left"></i> Earn and polish your skills with student programs, trainings, hands on labs, Internships, Externships and more. <i class="fa fa-quote-right"></i></h3>
+        </td>
+    </table>
+</div>
+{% elif type == 'Course' %}
+<style>
+    body {
+        background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+        background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    }
+</style>
+<div class="banner">
+    <img src="https://theeducationdaily.com/wp-content/uploads/2021/08/online-courses-2021.jpg" alt="" class="banner-image">
+    <table class="banner-table">
+        <td>
+            <img src="/static/Allops/images/course.png" alt="" class="banner-icon">
+        </td>
+        <td>
+            <h3><i class="fa fa-quote-left"></i> Best online courses available on web in various fields, according to the real world standards. <i class="fa fa-quote-right"></i></h3>
+        </td>
+    </table>
+</div>
+{% endif %}
+
+<!--Filters-->
+<div id="filter-panel">
+    <!--Interest filter-->
+    <div class="filter-dropdown">
+        <button class="btn"
+            style="padding:2px 12px 2px 12px;font-size:20px;margin-left: -26.041666666666668vw;margin-bottom: 5px;">Filters <i class="arrow-down">
+            </i></button>
+        <div class="blur-card" id="interest-blur" style="filter: blur(2px);z-index: 2 !important;height:  84.125vw;width: 22.833333333333332vw;padding: 15px;margin-top: 3vw;margin-left: -26.041666666666668vw;">
+        </div>
+        <div class="visible-card" id="interest-filter" style="margin-top:  3.2552083333333335vw;margin-left: -26.041666666666668vw;">
+            <form method="GET" id="interest-form" style="padding: 1.4322916666666667vw;font-size: 2.0833333333333335vw;text-align: left;">
+                {{ filter.form.interest }}
+            </form>
+        </div>
+    </div>
+    <!--Search Filter-->
+    <i class="fa fa-search" style="margin: 8px 10px 0 0;font-size: 24px;"></i>
+    <form method="GET" id="search-form">
+        {{ filter.form.title }}
+    </form>
+</div>
+<br><br>
+<div class="hr"></div>
+<!--List of related Opportunities-->
+<center><p style="font-size: 18px;color: #000;">Showing {{ total_items }} results.</p></center>
+{% if type == 'Course' %}
+<br>
+<center>
+<h5>NOTE: In courses section you can treat start date as the date it was added and totally ignore the end date as all the courses are self paced!</h5>
+</center>
+{% endif %}
+{% for item in items.object_list %}
+<div class="item-div">
+    <a href="{% url 'activity' item.id %}">
+        <div class="item-content">
+            <!--Opportunity front view-->
+            {% if item.featured == True %}
+            <div class="item-front" style="background-image: url('/static/Allops/images/featured-card.jpg');background-size: cover;">
+            {% else %}
+            <div class="item-front">
+            {% endif %}
+                <img src="{{ item.image }}" alt="" class="item-image">
+                {% if item.featured == True %}
+                <img src="/static/Allops/images/bookmark.png" alt="" style="height: 50px;width:40px;position: absolute;margin-left: -50px;transform: translateZ(35px);">
+                {% endif %}
+                <br><br>
+                <h5 class="item-head">
+                    {{ item.head }}
+                </h5>
+                <br>
+                <h6 class="item-dates"> <i class='far fa-calendar-alt'></i> {{ item.start }}</h6>
+                <br>
+                <p class="item-tag">{{ item.interest }}</p>
+            </div>
+            <!--Opportunity back view-->
+            <div class="item-back">
+                <p class="item-desc">"{{ item.desc }}"</p>
+                <!--Save and share buttons-->
+                <span class="item-share">
+                    <div class="fa fa-share-alt" data-id="{{ item.id }}"></div><br>
+                </span>
+                {% if request.user.is_authenticated %}
+                {% for save in saves %}
+                {% if save.activity.id == item.id %}
+                <span class="item-save">
+                    <div class="fas fa-bookmark" data-id="{{ item.id }}"></div>
+                </span>
+                {% else %}
+                <span class="item-save">
+                    <div class="far fa-bookmark fa-inverse" data-id="{{ item.id }}"></div>
+                </span>
+                {% endif %}
+                {% endfor %}
+                <span class="item-save">
+                    <div class="far fa-bookmark fa-inverse" data-id="{{ item.id }}"></div>
+                </span>
+
+                {% endif %}
+            </div>
+        </div>
+    </a>
+</div>
+{% endfor %}
+<br>
+<div class="hr"></div><br><br>
+<!--pagination-->
+<div class="pagination">
+    {% if items.has_previous %}
+    <h5><a href="{% url 'get_opportunities' type %}?page={{ items.previous_page_number }}"><i class="fas fa-angle-double-left" style="margin-right: 20px;"></i></h5>
+    {% endif %}
+    <h5>{{ items.number }}</h5>
+    {% if items.has_next %}
+    <h5><a href="{% url 'get_opportunities' type %}?page={{ items.next_page_number }}"><i class="fas fa-angle-double-right" style="margin-left: 20px;"></i></a></h5>
+    {% endif %}
+</div>
+<br>
+{% endblock %}

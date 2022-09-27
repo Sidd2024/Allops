@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" style"height: 100%;">
+
+<!--Required Favicons-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{% block title %}Allops{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'Allops/fonts/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire+Swash&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Blaka&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius+Unicase&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dokdo&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Molle:400i&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'Allops/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Allops/css/Navbar-Centered-Links-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'Allops/css/styles.css' %}">
+</head>
+
+<body>
+
+<!--Navbar-->
+    <nav class="navbar navbar-light navbar-expand-sm py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}"><span class="fw-normal" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ALL<span style="font-family: 'Zangezi07';">OPS</span></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-3">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" id="nav-compete" href="{% url 'get_opportunities' 'Competitive' %}" style="margin-right: 0.7161458333333334vw;font-size: 19px;font-weight: 500;margin-left: 19.53125vw;">Compete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'get_opportunities' 'Event' %}" style="margin-right: 1.1904761904761905vw;font-size: 19px;font-weight: 500;">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'get_opportunities' 'Program' %}" style="margin-right: 0.7161458333333334vw;font-size: 19px;font-weight: 500;">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'get_opportunities' 'Course' %}" style="font-size: 19px;font-weight: 500;">Courses</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"><a href="{% url 'saved' %}" class="nav-link" style="margin-left: 0.7161458333333334vw;font-size: 19px;font-weight: 500;margin-right: 19.53125vw">Saved</a></li>
+                </ul>
+                <div class="dropdown align-items-end align-content-end" style="text-align: center;position: sticky;marign-left: 3.2552083333333335vw;"><a aria-expanded="false" data-bs-toggle="dropdown" style="/*margin-right: 5px;*//*float: right;*/padding-right: 0px;padding-bottom: 0px;margin-bottom: 2px;margin-top: 3px;font-size: 35px;cursor: pointer;"><i class="fas fa-user-alt" style="color: black;"></i></a>
+                    <br><center><span style="font-family: Arial, Helvetica, sans-serif; font-weight: 900;text-align: center;">{{ request.user}}</span></center>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="{% url 'profile' %}">PROFILE</a><a class="dropdown-item" href="{% url 'mails' %}">MAILS</a><a class="dropdown-item" id="share-link" href="{% url 'share' %}">SHARE</a><a class="dropdown-item" href="{% url 'signout' %}">SIGN OUT</a></div>
+                </div>
+            {% else %}
+            <a href="{% url 'signup' %}"><button class="btn btn-primary text-nowrap text-uppercase fw-bold text-end" type="button" style="margin-left: 14.880952380952381vw;">Sign up</button></a>
+            <a href="{% url 'signin' %}"><button class="btn btn-primary text-nowrap text-uppercase fw-bold text-end" type="button">sign in</button></a>
+            {% endif %}
+            </div>
+            </div>
+    </nav>
+
+<!--Alerts Div-->
+    {% if success %}
+    <div style="height: fit-content;width: 100%;background-color: black;">
+    <div class="success">
+        <center><h5><i class="far fa-check-circle"></i> {{ success }}</h5></center>
+    </div>
+</div>
+    {% endif %}
+    {% if error %}
+    <div style="height: fit-content;width: 100%;background-color: black;">
+    <div class="error">
+      <center><h5><i class="far fa-times-circle"></i> {{ error }}</h5></center>
+    </div>
+</div>
+    {% endif %}
+    {% block body %}
+    {% endblock %}
+
+<!--Script Files-->
+    <script src="{% static 'Allops/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Allops/JS/Allops.js' %}"></script>
+</body>
+
+</html>
