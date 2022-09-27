@@ -137,7 +137,8 @@ EMAIL_USE_TLS = True
 
 #heroku url configuration
 ALLOWED_HOSTS = [
+    '*',
     '0.0.0.0',
-    'allops.herokuapp.com/', # your herokuapp url
+    'allops.herokuapp.com/',
     '127.0.0.1'
 ]
