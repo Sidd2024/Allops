@@ -122,7 +122,7 @@ def get_opportunities(request,type):
     #if user is logged in then get saved opportunities by that user.
     if user.is_authenticated:
         saves = save.objects.filter(user=request.user)
-        return render(request, "Allops/Opportunities.html", {
+        return render(request, "Allops/opportunities.html", {
             "items": page,
             "saves": saves,
             "filter": filter,
