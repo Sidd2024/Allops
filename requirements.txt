@@ -12,6 +12,7 @@ cryptography==36.0.1
 Django==4.0.6
 django-filter==22.1
 django-multiselectfield==0.1.12
+django-heroku==0.3.1
 gunicorn==20.1.0
 h11==0.13.0
 idna==3.3
