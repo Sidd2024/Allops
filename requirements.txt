@@ -34,4 +34,4 @@ tzdata==2021.5
 urllib3==1.26.8
 webdriver-manager==3.5.2
 wsproto==1.0.0
-whitenoise==2.0.6
+whitenoise==6.2.0
