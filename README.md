@@ -71,42 +71,6 @@ python manage.py createsuperuser
 
 <br>
 
-## Distinctiveness and Complexity
-* * *
-<br>
-
-Allops is not similar to any of the projects we have developed earlier in this course. It's not an social network nor an e-commerce website and neither similar to earlier projects or the old pizza project.
-Allops provide different services and stands for it's own purpose. I was also not able to find a platform like Allops which serves the same purpose on the web as well.
-
-<br>
-
-Coming to the Complexity of Allops, I've used django as backend with 3 models excluding User model. For frontend, Javascript is used, there's a single file 'Allops.js' which include all  the necessary Javascript code for the Allops website. Different sections of this file which serve different purpose are seperated with comments. Not in this file only, most of the files I have created in this project contains comments wherever it felt necessary.
-Allops is also more complex than earlier projects as it have the following features:
-
-<br>
-
-* Filters: 
-    - Interest filter, which is a multiple select checkbox field to search effectively.
-    - Search filter, which searches the opportunities by keywords in their titles.
-
-* Mail notifications:
-    - Users can subscribe to mail notifications by selecting the interests for which they want to recieve mails,
-    users will recieve mails as soon as an opportunity is added which is tagged with any single interest that matches with the user's selected intersts.
-
-    - Users can subscribe, unsubscribe and update the mail notification services accordingly.
-
-* Saved, Share, Index and frontend:
-    - Users with an account can save opportunities to apply later.
-    - Any user can share opportunities with others just by clicking on the share button.
-    - Index page have a technology leaderboard according to the opportunities tagged with them.
-    - Frontend is also very impressive than earlier projects of mine.
-
-<br>
-
-Every page of Allops is responsive, not just only for mobiles, pc's and laptops but for others screen sizes as well. Also website's frontend is equally impressive for mobile screens.
-
-<br>
-
 ## Files Information
 * * *
 
