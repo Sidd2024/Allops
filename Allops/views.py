@@ -300,6 +300,13 @@ def activate_mails(request):
             user = request.user
             unsubscribe = form.cleaned_data['unsubscribe']
             subscribed = mails.objects.filter(user = user,mail_id = mail_id).first()
+            
+            #Throws error if user mail id not match with given email id:
+            if mail_id != user.email:
+                return render(request, 'Allops/mails.html',{
+                    "error": "Invalid email id!",
+                    "form": form
+                })
 
             #Delete mails model for user if he/she chooses to unsubscribe:
             if unsubscribe == True:
