@@ -41,8 +41,8 @@
                     <div class="dropdown-menu"><a class="dropdown-item" href="{% url 'profile' %}">PROFILE</a><a class="dropdown-item" href="{% url 'mails' %}">MAILS</a><a class="dropdown-item" id="share-link" href="{% url 'share' %}">SHARE</a><a class="dropdown-item" href="{% url 'signout' %}">SIGN OUT</a></div>
                 </div>
             {% else %}
-            <a href="{% url 'signup' %}"><button class="btn btn-primary text-nowrap text-uppercase fw-bold text-end" type="button" style="margin-left: 14.880952380952381vw;">Sign up</button></a>
-            <a href="{% url 'signin' %}"><button class="btn btn-primary text-nowrap text-uppercase fw-bold text-end" type="button">sign in</button></a>
+            <a href="{% url 'signup' %}"><button class="btn btn-primary text-nowrap text-uppercase fw-bold text-end mx-2 my-1" type="button">Sign up</button></a>
+            <a href="{% url 'signin' %}"><button class="btn btn-primary text-nowrap text-uppercase fw-bold text-end mx-2 my-1" type="button">sign in</button></a>
             {% endif %}
             </div>
             </div>
