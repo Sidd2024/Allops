@@ -219,7 +219,7 @@ width: 350px;
   transition: 0.3s;
   align-items: end;
   justify-content: center;
-  margin: 40px 50px 40px 50px;
+  margin: 40px 100px 40px 100px;
   display:inline-flex;
   z-index: -2 !important;
 }
