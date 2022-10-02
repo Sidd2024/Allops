@@ -24,5 +24,5 @@ A fully remote, 12-week internship where participants earn a stipend and learn t
 Official Link: https://fellowship.mlh.io  
 <br>
 <br>
-ALLOPS Link: https://allops.herokuapp.com
+ALLOPS Link: https://fellowship.mlh.io/programs/open-source
 </details>  
