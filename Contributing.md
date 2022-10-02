@@ -23,6 +23,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
   - [Suggesting Enhancements](#suggesting-enhancements)
   - [Your First Code Contribution](#your-first-code-contribution)
   - [Improving The Documentation](#improving-the-documentation)
+  - [Adding Opportunities](#adding-opportunities)
 - [Styleguides](#styleguides)
   - [Commit Messages](#commit-messages)
 
@@ -228,6 +229,43 @@ If you have never contributed to an open source project before and you’re just
 ### Improving The Documentation
 
 If you want to improve the documentation then first go through [Creating Documentation](https://octoverse.github.com/creating-documentation/) website.
+
+### Adding Opportunities
+
+#### Opportunity Requirements:
+
+- Should be an upcoming one.
+- Have an Official Link
+
+#### Steps to follow:
+
+1 Create a new issue or ask here to add an opportunity with its title, brief description and an official link.
+2 Wait to be assigned with that issue or to receive a green flag from my side.
+3 Head over to [Allops](https://allops.herokuapp.com/) and signup.
+4 Now go to [Share](https://allops.herokuapp.com/share).
+5 Here you can fill the form with appropriate details and submit it.
+
+- Brief description should not be more than 50 - 60 words.
+- You can judge the appropriate TYPE of opportunity by looking at the banners: [Competitive](https://allops.herokuapp.com/Type/Competitive), [Event](https://allops.herokuapp.com/Type/Event), [Program](https://allops.herokuapp.com/Type/Program), [Course](https://allops.herokuapp.com/Type/Course)
+- If you are adding a course, then add those only which are actually good and tried. I am not asking to add every tech course available on the internet.
+ - The interest selected should not be more than 5.
+
+6 Now it's time to add it to the Opportunities.md list and raise a corresponding PR.
+
+- The opportunities should be arranged in alphabetical order.
+- Make sure that the Opportunity is in the following format.
+
+#### Format of Opportunities.md:
+
+```
+<details>
+<summary> TITLE(Allops USERNAME)</summary>
+<br>
+BREIF DESCRIPTION
+<br><br>
+Allops LINK
+</details>
+```
 
 ## Styleguides
 
