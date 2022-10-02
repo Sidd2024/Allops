@@ -15,3 +15,13 @@ EXAMPLES
 <br><br>
 Allops LINK: https://allops.herokuapp.com/opportunity/54
 </details>
+
+<details>
+<summary>RoboHacks 2 by MLH(rahul)</summary>
+<br>
+Hosted by MLH hackathon is a 48-hour hackathon hosted every weekend in our community discord. Visit discord.mlh.io for more details about the ongoing hackathon.
+Keep an eye out on this space for more information about the theme. They'll be running mini-events, workshops, and more to keep you entertained. Whether you build something on the theme or not, they want you to focus on having fun.
+This event is open to hackers, all over the world. While they primarily work with student hackers or those who have graduated within the last 12 months, working professionals are also welcome to join them. Students can include high school students, university undergraduate or postgraduate students, and people who are in vocational training such as apprenticeships.
+<br><br>
+Allops LINK: https://allops.herokuapp.com/opportunity/54
+</details>
