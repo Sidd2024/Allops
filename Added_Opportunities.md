@@ -5,7 +5,7 @@ Please read about contributing to this first in [Contributing guidelines](https:
 <details>
 <summary> Build a Climate Fintech App(rahul)</summary>
 <br>
-BREIF DESCRIPTION:Create a Climate Fintech Application, build on your own existing app, marketplace, or platform or create a powerful fintech feature that can be integrated into your Climate app or platform.
+Create a Climate Fintech Application, build on your own existing app, marketplace, or platform or create a powerful fintech feature that can be integrated into your Climate app or platform.
 EXAMPLES
 >Using climate APIs computer models to payout climate disaster victims
 >Carbon offsetting applications and marketplaces need to pay into wallets and payout to other users
