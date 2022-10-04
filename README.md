@@ -4,23 +4,8 @@
 
 <p align="center">
 <a href="https://allops.herokuapp.com/">Visit us👉🏻</a><br><br>
-<strong>Allops is a dynamic website which helps proffessionals and students to stay informed about all the academic activities and opportunities available around the globe.</strong>
+<strong>Allops is a dynamic website which helps proffessionals and students to stay informed about all the academic activities and opportunities available around the globe.<br><br> 🌟this repo to get started!<br></strong>
 </p>
-
-## Pages and Components:
-* * *
-<br>
-
-* **Home/index** page to show our purpose, services and featured opportunities.
-* **Signup, Signin** and **Signout**.
-* **Compete, Events, Programs, Courses** to categorize opportunities and effective search.
-* **Opportunity page** which contains all the details of a single opportunity like dates,official link, overview etc.
-* **Saved** which allows user to save the opportunities to apply later
-* **Mails** to allow users to subscribe/unsubscribe to our mail notifications.
-* **Share** to allow user to share opportunities which are not listed and help community.
-* **Profile page** for user options and opportunities shared by user.
-
-<br>
 
 ## Installation
 * * *
@@ -70,6 +55,22 @@ python manage.py createsuperuser
 *This step is important to add opportunities to featured list because I think only website's admin should be allowed to add opportunities to the featured list.*
 
 <br>
+
+## Pages and Components:
+* * *
+<br>
+
+* **Home/index** page to show our purpose, services and featured opportunities.
+* **Signup, Signin** and **Signout**.
+* **Compete, Events, Programs, Courses** to categorize opportunities and effective search.
+* **Opportunity page** which contains all the details of a single opportunity like dates,official link, overview etc.
+* **Saved** which allows user to save the opportunities to apply later
+* **Mails** to allow users to subscribe/unsubscribe to our mail notifications.
+* **Share** to allow user to share opportunities which are not listed and help community.
+* **Profile page** for user options and opportunities shared by user.
+
+<br>
+
 
 ## Files Information
 * * *
