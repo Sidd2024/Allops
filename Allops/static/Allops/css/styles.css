@@ -133,7 +133,7 @@
 
 .btn-primary:hover {
   transform: translate(0, -2px);
-  color: #f639f9;
+  color: #64748b;
   background-color: inherit;
   border-color: var(--bs-gray-dark);
   box-shadow: 3.5px -3.5px 2px 0 rgba(143, 64, 248, 0.5),
@@ -141,7 +141,7 @@
 }
 
 .btn:focus {
-  color: #000;
+  color: #04aa6d;
 }
 
 body {
