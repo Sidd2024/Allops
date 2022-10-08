@@ -59,3 +59,10 @@ In the past three seasons, this eclectic mix of talent and enthusiasm has provid
 Allops LINK: https://allops.herokuapp.com/opportunity/54 
 </details>
 
+<details>
+<summary>ETHIndia 2022</summary>  
+<br>
+ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum. It’s a place where the leading minds in the Ethereum ecosystem are uniting with 1500+ builders from around the globe to build decentralized applications for the future.
+<br> <br> 
+Allops LINK: https://allops.herokuapp.com/opportunity/54 
+</details>
