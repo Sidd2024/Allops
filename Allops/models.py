@@ -64,6 +64,9 @@ class save(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank = False, related_name="prof_user")
     activity = models.ForeignKey(opportunity, on_delete=models.CASCADE, blank = False, related_name="item")
 
+    def __str__(self):
+        return (f"{self.activity.head} by {self.user}")
+
 class mails(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="mail_user",blank=False)
     mail_id = models.EmailField(blank=False)

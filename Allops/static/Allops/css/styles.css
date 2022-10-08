@@ -239,13 +239,13 @@ a {
   transition: 0.3s;
   align-items: end;
   justify-content: center;
-  margin: 40px 100px 40px 100px;
+  margin: 130px 100px 100px 100px;
   display: inline-flex;
   z-index: -2 !important;
 }
 .item-content {
   overflow: visible !important;
-  width: 300px;
+  width: 320px;
   height: 400px;
   padding: 5px;
   transition: transform 3s;
@@ -256,6 +256,12 @@ a {
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   color: #000;
   z-index: -2;
+
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .item-div:hover .item-content {
   transform: rotateY(180deg);
@@ -298,7 +304,7 @@ a {
 }
 .item-image {
   height: 160px;
-  width: 300px;
+  width: 320px;
   text-align: center;
   border-radius: 15px 15px 0 0;
 }
