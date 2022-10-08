@@ -528,6 +528,7 @@ a {
 /* Opportunity banner styles */
 .banner-image {
   width: 100%;
+  object-fit: cover;
   height: 35.807291666666664vw;
   opacity: 0.55;
   z-index: -99 !important;
