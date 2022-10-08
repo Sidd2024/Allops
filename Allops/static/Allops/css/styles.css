@@ -139,6 +139,14 @@
   box-shadow: 3.5px -3.5px 2px 0 rgba(143, 64, 248, 0.5),
     -3.5px 3.5px 2px 0 rgba(143, 64, 248, 0.5);
 }
+.btn:hover {
+  transform: translate(0, -2px);
+  color: #64748b;
+  background-color: inherit;
+  border-color: var(--bs-gray-dark);
+  box-shadow: 3.5px -3.5px 2px 0 rgba(143, 64, 248, 0.5),
+    -3.5px 3.5px 2px 0 rgba(143, 64, 248, 0.5);
+}
 
 .btn:focus {
   color: #04aa6d;
