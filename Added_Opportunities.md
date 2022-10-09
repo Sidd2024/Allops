@@ -66,3 +66,12 @@ ETHIndia is a hackathon — a movement with the goal of inspiring and fostering 
 <br> <br> 
 Allops LINK: https://allops.herokuapp.com/opportunity/54 
 </details>
+
+<details>
+<summary>Call for Code Global Challenge 2022</summary>  
+<br>
+As part of the 5th annual Call for Code Global Challenge, design and build an open-source solution in the cloud to take on a sustainability issue.
+Form a team and take on sustainability issues from improving supply chains to clean energy solutions and the protection of biodiversity. 
+<br> <br> 
+Allops LINK: https://allops.herokuapp.com/opportunity/53
+</details>
