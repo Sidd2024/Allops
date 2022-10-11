@@ -76,7 +76,6 @@ Form a team and take on sustainability issues from improving supply chains to cl
 Allops LINK: https://allops.herokuapp.com/opportunity/53
 </details>
 
-
 <details>
 <summary>Learn Artificial intelligence</summary>  
 <br>
