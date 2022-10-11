@@ -75,3 +75,12 @@ Form a team and take on sustainability issues from improving supply chains to cl
 <br> <br> 
 Allops LINK: https://allops.herokuapp.com/opportunity/53
 </details>
+
+<details>
+<summary>Learn Artificial intelligence</summary>  
+<br>
+You've probably heard about the artificial intelligence and machine learning algorithms that power your favorite apps with data science and deep learning techniques. 
+But how much do you really know about how AI works or how it's changing the world around us? Learn the basics of this technology, which has the potential to change every single job in the near future, and start building your skills with these free courses.
+<br> <br> 
+Allops LINK: https://allops.herokuapp.com/opportunity/55
+</details>
