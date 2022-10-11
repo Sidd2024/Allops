@@ -84,3 +84,10 @@ But how much do you really know about how AI works or how it's changing the worl
 <br> <br> 
 Allops LINK: https://allops.herokuapp.com/opportunity/55
 </details>
+<details>
+<summary>DRDO Internship 2022(sohamghadge)</summary>  
+<br>
+Scheme of Internship of student to DRDO Labs/Estts is to provide an opportunity and exposure to the would be Graduates/Post Graduates in Engineering/General Sciences to the Research and Development activities carried out by DRDO in state of art technology in the fields relevant to defence sector. DRDO intends to provide interns with real life experience of working on research oriented projects. This internship also provides a monthly stipend upto 10000. The duration is of 2 months.
+<br> <br> 
+Allops LINK: https://www.drdo.gov.in/scheme-internship-students
+</details>
