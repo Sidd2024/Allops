@@ -84,3 +84,10 @@ But how much do you really know about how AI works or how it's changing the worl
 <br> <br> 
 Allops LINK: https://allops.herokuapp.com/opportunity/55
 </details>
+<details>
+<summary>DRDO internships 2022(sohamghadge)</summary>  
+<br>
+Scheme of Internship of student to DRDO Labs/Estts is to provide an opportunity and exposure to the would be Graduates/Post Graduates in Engineering/General Sciences to the Research and Development activities carried out by DRDO in state of art technology in the fields relevant to defence sector. DRDO also provides Stipend to the interns to encourage more participation of students towards real world projects. 
+<br> <br> 
+Allops LINK: https://allops.herokuapp.com/opportunity/53
+</details>
