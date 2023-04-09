@@ -12,6 +12,7 @@ from .filters import opportunityFilter
 from .forms import *
 from .models import *
 from django.core.paginator import Paginator
+import http.client,json
 
 
 def index(request):
@@ -364,4 +365,48 @@ def activate_mails(request):
             "form": form,
             "user": user,
             "subscribed": subscribed
+        })
+    
+    @login_required
+def validate_mail(request):
+    
+    if request.method == 'POST':
+        form = validate_form(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['mail_id']
+            conn = http.client.HTTPSConnection("api.apyhub.com")
+            payload = "{\"email\":\""+email+"\"}"
+            headers = {
+            'apy-token': "APY0UD0xUOw2Ke2oSetASpZ8UFU3b6AQsAFhJ6X5yk7RFaP4l16WcKRVc4TeMFT9MkkVRKHUJL1FUR",
+            'Content-Type': "application/json"
+            }
+
+            conn.request("POST", "/validate/email/academic", payload, headers)
+
+            res = conn.getresponse()
+            data = res.read()
+
+            flag = data.decode("utf-8")
+            valid = json.loads(flag)
+            
+
+            if valid['data']:
+                return render(request, "Allops/validate.html",{
+                    "form": form,
+                    "success": "Great!, Academic Email is Valid!"
+                })
+            else:
+                return render(request, "Allops/validate.html",{
+                    "form": form,
+                    "error": "Invalid Academic Email!"
+                })
+        else:
+            return render(request, "Allops/validate.html",{
+                "form": form,
+                "error": "Something went wrong!"
+            })
+    else:
+        form = validate_form(request.GET)
+        return render(request, "Allops/validate.html",{
+            "form": form
         })
