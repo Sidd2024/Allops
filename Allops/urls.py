@@ -15,5 +15,7 @@ urlpatterns = [
     path('saved',views.saved,name="saved"),
     path('share',views.share,name="share"),
     path('profile',views.profile,name="profile"),
-    path('mails',views.activate_mails,name="mails")
+    path('mails',views.activate_mails,name="mails"),
+    path('validate',views.validate_mail,name="validate")
+
 ]
