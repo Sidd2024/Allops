@@ -31,3 +31,6 @@ class mails_form(forms.Form):
     fields = MultiSelectFormField(required=False,choices = my_fields, widget=forms.CheckboxSelectMultiple(attrs={'placeholder': 'Field tags','id': 'interest'}))
     mail_id = forms.EmailField(required = True,widget=forms.TextInput(attrs={'placeholder': 'Email ID','class': 'share'}))
     unsubscribe = forms.BooleanField(required=False, widget=forms.CheckboxInput(attrs={'placeholder': 'Unsubscribe','class': 'share'}))
+   
+class validate_form(forms.Form):
+    mail_id = forms.EmailField(required = True,widget=forms.TextInput(attrs={'placeholder': 'Email ID','class': 'share'}))
