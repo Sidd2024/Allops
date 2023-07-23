@@ -13,7 +13,7 @@ align="center" , font-family:"">
 
 <p align="center">
 <a href="https://allops.herokuapp.com/">Visit us👉🏻</a><br><br>
-<strong>Allops is a dynamic website which helps proffessionals and students to stay informed about all the academic activities and opportunities available around the globe.<br><br> 🌟this repo to get started!<br></strong>
+<strong>Allops is a dynamic website which helps professionals and students to stay informed about all the academic activities and opportunities available around the globe.<br><br> 🌟this repo to get started!<br></strong>
 </p>
 
 ## Installation
@@ -22,10 +22,16 @@ align="center" , font-family:"">
 
 <br>
 
-1. First we need to install the dependencies, install project dependencies by running:
+**Before cloning and setting up the project, make sure to install django from <a href="https://docs.djangoproject.com/en/4.2/topics/install/">here</a>**
+
+<br>
+
+1. First we need to install the dependencies, and install project dependencies by running:
 
 
+```
 pip install -r requirements.txt
+```
 
 
 Dependencies include django-filters and django multiselectfield, responsible for filters, mails, share and Interest tags of opportunities.
@@ -35,24 +41,27 @@ Dependencies include django-filters and django multiselectfield, responsible for
 2. Make and apply migrations by running:
 
 
+```
 python manage.py makemigrations
-
+```
 
 followed by:
 
 
+```
 python manage.py migrate
-
+```
 
 <br>
 
 3. Run your local server by running:
 
 
+```
 python manage.py runserver
+```
 
-
-copy local host address and paste it in the browser's address bar.
+copy local host address and paste it into the browser's address bar.
 
 <br>
 
@@ -63,10 +72,11 @@ copy local host address and paste it in the browser's address bar.
 5. Create a super user by running:
 
 
+```
 python manage.py createsuperuser
+```
 
-
-This step is important to add opportunities to featured list because I think only website's admin should be allowed to add opportunities to the featured list.
+This step is important to add opportunities to featured list because I think only the website's admin should be allowed to add opportunities to the featured list.
 
 <br>
 <br>
