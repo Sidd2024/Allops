@@ -9,7 +9,7 @@ align="center" , font-family:"">
 <br>
 
 <img src="https://github.com/Sidd2024/Allops/assets/86948743/daf12a35-734f-44cc-b6a7-204ef85b9489" width="500px" height="300px">
-<img src="https://github.com/Sidd2024/Allops/assets/86948743/681d9215-6d23-47ac-b0b6-5c92ecf76c9e" width="500px" height="300px">
+<img src="https://github.com/Sidd2024/Allops/assets/86948743/681d9215-6d23-47ac-b0b6-5c92ecf76c9e" width="500px" height="300px" padding-left="50px">
 
 <br>
 
