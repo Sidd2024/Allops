@@ -395,7 +395,3 @@ This folder contains all the html files used in the website.
 - *Saved section :* contains all the saved courses, programs, events and hackathons the user is interested in and want to get further information about those in future.
 
 - *Share :* this feature gives user an opportunity to share opportunities which are not present on the platform which are added on the platform after being reviewed by the admin team.
-
-<!-- ![Alt text](<Screenshot%20(102).png>)![Alt text](<Screenshot%20(107).png>)![Alt text](<Screenshot%20(110).png>) -->
-
-<img src="Screenshot (102).png" width="365" height="225"> | <img src="Screenshot (107).png" width="365" height="225" >| <img src="Screenshot (110).png" width="365" height="225">
