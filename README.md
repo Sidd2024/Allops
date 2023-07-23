@@ -6,7 +6,12 @@ align="center" , font-family:"">
 <!-- <h1 align="center"><strong><u>Demo 📹</u></strong></h1> -->
 <center>
 
-[![Alt text](https://img.youtube.com/vi/8yFtni7xWCA/0.jpg)](https://www.youtube.com/watch?v=8yFtni7xWCA)
+<br>
+
+<img src="https://github.com/Sidd2024/Allops/assets/86948743/daf12a35-734f-44cc-b6a7-204ef85b9489" width="500px" height="300px">
+<img src="https://github.com/Sidd2024/Allops/assets/86948743/681d9215-6d23-47ac-b0b6-5c92ecf76c9e" width="500px" height="300px">
+
+<br>
 
 </center>
   <!-- <img src="https://i.ytimg.com/vi/8yFtni7xWCA/0/maxresdefault.jpg" /> -->
