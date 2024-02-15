@@ -1,0 +1,44 @@
+{% extends 'Allops/layout.html' %}
+
+{% block body %}
+<style>
+    body {
+        background-image: url("/static/Allops/images/mails.jpg")
+    }
+</style>
+<div class="hr"></div>
+<!--Heading-->
+<br>
+<center>
+    <span style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 40px;">Mail </span><span style="font-family: 'Zangezi07';font-size:40px;">Notifications <i class="fa fa-bell"></i></span>
+        
+</center>
+<br><br>
+<!--Mail Form-->
+<center>
+<div class="blur-card" style="height: 1150px;width: 425px;margin-left: 35.807291666666664vw" id="form-blur">
+</div>
+<div class="visible-card" style="text-align: left;margin-left: 35.807291666666664vw;padding: 40px;" id="form-visible">
+<form action="{% url 'mails' %}" method="POST">
+    {% csrf_token %}
+    <h4>Select Interests</h4>
+    {{ form.fields }}<br>
+    {{ form.mail_id }}<br><br>
+    <center><p>The above email id should be the one <br>which is associated with your account!</p></center><br>
+    {% if subscribed %}
+    <center>{{ form.unsubscribe }}<h5>Unsubscribe</h5></center><br>
+    {% endif %}
+    <center>
+    <input type="submit" value="Save" class="btn" style="padding-left:20px; padding-right: 25px;">
+    </center>
+    <br><br>
+</form>
+</div>
+
+<!--Vector Image-->
+<div >
+    <img src="static/Allops/images/mail-image.png" alt="" style="height: 800px;width: 90%;margin-top: 200px;">
+</div>
+</center>
+
+{% endblock body %}

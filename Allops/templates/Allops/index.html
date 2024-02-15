@@ -1,0 +1,167 @@
+{% extends "Allops/layout.html" %}
+
+{% block body %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="hr"></div><br>
+
+<!--Index page heading-->
+<div id="index">
+    <img src="static/Allops/images/index-image-1.png" alt=""
+        style="width: 15.527950310559007vw;height: 23.29192546583851vw;margin-left: 1.953125vw;">
+    <div id="index-head">
+        <div class="quote" style="margin-left: 6.510416666666667vw;">The</div>
+        <div class="para" style="height: 6.510416666666667vw;width: 11.71875vw;margin-left: 3.2552083333333335vw;">
+            Allops takes the responsibility to notify professionals and students about the academic activites happening
+            around the globe.</div><br>
+        <div class="quote" style="margin: 0px 0px 0px 6.510416666666667vw; top: -5.859375vw;font-family: 'Zangezi07';">
+            home</div>
+        <div class="quote" style="margin-left: 50px;top: -5.859375vw;">of</div><br>
+        <div class="para"
+            style="height: 6.510416666666667vw;width: 16.276041666666668vw;margin-left: 7.161458333333333vw;top: -11.067708333333334vw;">
+            In this ever growing world, it's hard to stay informed and updated and sometimes we might miss on some
+            awesome stuff. So we introduce ALLOPS to prevent that with one's career.</div>
+        <div class="quote" style="margin-left: 1.953125vw;top: -11.71875vw;">all</div><br>
+        <div class="quote"
+            style="margin: 0px 0px 0px 6.510416666666667vw; top: -14.973958333333334vw;font-family: 'Zangezi07';">
+            Opportunities</div>
+    </div>
+    <img src="static/Allops/images/index-image-2.png" alt=""
+        style="width: 15.527950310559007vw;height: 23.29192546583851vw;margin: -67.05729166666667vw 0px 0px  81.38020833333333vw;">
+</div>
+<div class="hr" style="margin-top: -9.765625vw;"></div><br><br>
+
+<!--Services-->
+<div class="index-panel" data-aos="fade-up" data-aos-duration="2000">
+    <div class="index-ad">
+        <div class="mails-ad">
+            <h2>Subscribe to our mail notifications <i class="fa fa-bell"></i></h2>
+            {% if user.is_authenticated %}
+            <button class="btn"><a href="{% url 'mails' %}">Subscribe Here</a></button>
+            {% else %}
+            <button class="btn"><a href="{% url 'signin' %}">Subscribe Here</a></button>
+            {% endif %}
+        </div>
+        <div class="share-ad">
+            <h2>Opportunity not listed?, Share with us <i class="fa fa-align-justify"></i></h2>
+            {% if user.is_authenticated %}
+            <button class="btn"><a href="{% url 'share' %}">Share Here</a></button>
+            {% else %}
+            <button class="btn"><a href="{% url 'signin' %}">Share Here</a></button>
+            {% endif %}
+        </div>
+    </div>
+    <div class="index-table"><br><br>
+        <h2 style="margin-left: 120px;">Top Opportunities Tech:</h2><br>
+        <div class="blur-card"
+            style="height: 480px;width: 465px;border-radius: 20px;margin-left: 120px;margin-right:30px;"
+            id="table-blur"></div>
+        <div class="visible-card" style="padding: 30px 30px 30px 30px;margin-left: 120px;margin-right: 30px;"
+            id="table-visible">
+            <table class="tech-board">
+                <tr>
+                    <th>Technology</th>
+                    <th>Opportunities</th>
+                </tr>
+                {% for tech,val in dict %}
+                <tr>
+                    <td style="border-right: 2px solid #000;">{{ tech }}</td>
+                    <td style="text-align: center;">{{ val }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div><br><br><br><br><br><br><br><br><br>
+<br>
+
+<!--Featured Opportunities-->
+<div class="featured-div" id="featured" data-aos="flip-up" data-aos-duration="2000"><br>
+    <center>
+        <h2 style="color: white;">FEATURED <i class="fa fa-star"></i></h2>
+    </center>
+
+    {% for item in items %}
+    <div class="item-div">
+        <a href="{% url 'activity' item.id %}">
+            <div class="item-content">
+                <div class="item-front"
+                    style="background-image: url('/static/Allops/images/featured-card.jpg');background-size: cover;">
+                    <img src="{{ item.image }}" alt="" class="item-image">
+                    <img src="static/Allops/images/bookmark.png" alt=""
+                        style="height: 60px;width:40px;position: absolute;margin-left: -50px;transform: translateZ(35px);">
+                    <br><br>
+                    <h5 class="item-head">
+                        {{ item.head }}
+                    </h5>
+                    <br>
+                    <h6 class="item-dates"> <i class='far fa-calendar-alt'></i> {{ item.start }}</h6>
+                    <br>
+                    <p class="item-tag">{{ item.interest }}</p>
+                </div>
+                <div class="item-back">
+                    <p class="item-desc">"{{ item.desc }}"</p>
+                    <span class="item-share">
+                        <div class="fa fa-share-alt" data-id="{{ item.id }}"></div><br>
+                    </span>
+                    {% if request.user.is_authenticated %}
+                    {% for save in saves %}
+                    {% if save.activity.id == item.id %}
+                    <span class="item-save">
+                        <div class="fas fa-bookmark" data-id="{{ item.id }}"></div>
+                    </span>
+                    {% else %}
+                    <span class="item-save">
+                        <div class="far fa-bookmark fa-inverse" data-id="{{ item.id }}"></div>
+                    </span>
+                    {% endif %}
+                    {% endfor %}
+                    <span class="item-save">
+                        <div class="far fa-bookmark fa-inverse" data-id="{{ item.id }}"></div>
+                    </span>
+
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+<br><br><br><br><br><br><br><br><br>
+
+<!--Index Footer-->
+<div class="footer" data-aos="fade-up" data-aos-duration="2000">
+    <div class="footer-div">
+        <div class="col-1">
+            <h5>Allops</h5>
+            <span><a href="#top">About</a></span><br>
+            <span><a href="#featured">Featured</a></span><br>
+            {% if user.is_authenticated %}
+            <span><a href="{% url 'mails' %}">Mails</a></span><br>
+            <span><a href="{% url 'share' %}">Share</a></span><br>
+            <span><a href="{% url 'profile' %}">Profile</a></span><br>
+            <span><a href="{% url 'saved' %}">Saved</a></span><br>
+            {% endif %}
+        </div>
+        <div class="col-2">
+            <h5>Opportunities</h5>
+            <span><a href="{% url 'get_opportunities' 'Competitive' %}">Compete</a></span><br>
+            <span><a href="{% url 'get_opportunities' 'Event' %}">Events</a></span><br>
+            <span><a href="{% url 'get_opportunities' 'Program' %}">Programs</a></span><br>
+            <span><a href="{% url 'get_opportunities' 'Course' %}">Courses</a></span><br>
+        </div>
+        <div class="col-3">
+            <h5>Contact</h5>
+            <span>allopsweb@gmail.com</span><br>
+            <span>9829XXXXXX</span><br>
+            <span>Plot-11, Premnagar, Jhotwara,<br>Jaipur, Rajasthan</span><br>
+        </div>
+        <div class="col-4">
+            <h5>Socials</h5>
+            <span><a href="https://github.com/Sidd2024/Allops"><i class="fab fa-github"></i> Github</a></span><br>
+            <span><i class="fab fa-twitter"></i> Twitter</span><br>
+            <span><i class="fab fa-youtube"></i> Youtube</span><br>
+        </div>
+    </div>
+</div>
+{% endblock %}

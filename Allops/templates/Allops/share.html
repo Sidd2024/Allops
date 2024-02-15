@@ -1,0 +1,47 @@
+{% extends 'Allops/layout.html' %}
+
+{% block body %}
+<style>
+    body {
+        background-image: url("/static/Allops/images/share.jpg")
+    }
+</style>
+<div id="form-view">
+    <div class="hr"></div><br>
+    <!--Shared Heading-->
+    <center>
+        <span style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 40px;">Share
+        </span><span style="font-family: 'Zangezi07';font-size:40px;">Opportunity</span>
+    </center>
+            <div class="blur-card"
+                style="margin-left: 40px;padding: 0px 30px 30px 30px;width: 450px;height: 1630px;" id="share-blur">
+            </div>
+            <div class="visible-card" style="margin-left: 50px;padding: 50px 35px 30px 35px;" id="share-visible">
+            <!--Share Form-->
+                <form action="{% url 'share' %}" method="POST" id="share-form">
+                    {% csrf_token %}
+                    {{ form.head }}<br><br>
+                    {{ form.desc }}<br><br>
+                    <h4>Starts from</h4>
+                    {{ form.start }}<br><br>
+                    <h4>Deadline</h4>
+                    {{ form.end }}<br><br>
+                    <h4>Select Interest tags:</h4>
+                    {{ form.interest }}<br>
+                    <h4>Select Category</h4>
+                    {{ form.type }}<br><br>
+                    {{ form.location }}<br><br>
+                    {{ form.details }}<br><br>
+                    {{ form.link }}<br><br>
+                    {{ form.image }}<br><br>
+                    <br>
+                    <input type="submit" value="Submit Opportunity" class="btn" style="margin-left: 4.8828125vw;">
+                    <br><br>
+                </form>
+            </div>
+        </div>
+    <!--Vector Image-->
+    <div class="vector-div">
+        <img src="static/Allops/images/share-image.png" alt="" style="width: 45.572916666666664vw;height: 32.552083333333336vw;margin-left: 46.33204633204633vw;margin-top: 200px;">
+    </div>
+{% endblock body %}

@@ -1,0 +1,31 @@
+{% extends "Allops/layout.html" %}
+
+{% block body %}
+{% if message %}
+{{ message }}
+{% endif %}
+<style>
+    body {
+        background-image: url("/static/Allops/images/signup.jpg")
+    }
+</style>
+<div class="hr"></div><br><br>
+<div class="blur-card" style="height: 500px;width: 425px;margin-left: 35.807291666666664vw" id="form-blur">
+</div>
+<div class="visible-card" style="margin-left: 35.807291666666664vw;padding: 40px" id="form-visible">
+<center>
+<h2 style="font-family: 'Bowlby One SC', serif;">SIGN UP</h2><br>
+<!--Signup Form-->
+<form action="{% url 'signup' %}" method="post">
+    {% csrf_token %}
+    {{ form.username }}<br><br>
+    {{ form.email }}<br><br>
+    {{ form.password }}<br><br>
+    {{ form.confirm_pass }}<br><br>
+<br>
+<input class="btn btn-primary text-nowrap text-uppercase fw-bold text-end" type="submit" value="Create Account"><br><br>
+<p>Already have an account?, <a href="{% url 'signin' %}" style="text-decoration: underline;font-weight: bold;">Sign in here.</a></p>
+</form>
+</center>
+</div>
+{% endblock %}
