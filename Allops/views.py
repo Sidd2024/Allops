@@ -804,7 +804,7 @@ def activate_mails(request):
             "subscribed": subscribed
         })
     
-    @login_required
+@login_required
 def validate_mail(request):
     
     if request.method == 'POST':
